@@ -1,4 +1,4 @@
-# Kinemathika
+# Kinemathika - Group 6
 An interactive Unity-based mobile app that helps students learn and practice kinematics through worksheets and dynamic AR visualizations. Designed to make physics more engaging, personalized, and accessible.
 
 ## 🎯 Project Goals
