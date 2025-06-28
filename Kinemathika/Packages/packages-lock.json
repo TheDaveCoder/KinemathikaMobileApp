@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.gilzoide.flex-ui": {
+      "version": "https://github.com/gilzoide/unity-flex-ui.git#1.2.2",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "30ea7a5980e4b111ed4462807adf9dfb6d091f41"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
