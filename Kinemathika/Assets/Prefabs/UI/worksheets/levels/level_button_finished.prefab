@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6581153273519649467}
   - component: {fileID: 8082797675892646925}
   - component: {fileID: 1938632979804720609}
+  - component: {fileID: 4424718569208055243}
   m_Layer: 5
   m_Name: level_button_finished
   m_TagString: Untagged
@@ -76,6 +77,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4424718569208055243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188153275823822100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81860c2f77ff72447b6993e3a3f438de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5869968494520879185
 GameObject:
   m_ObjectHideFlags: 0
