@@ -41,7 +41,8 @@ public class Concept
 public class WorksheetHeader
 {
     public string worksheetId;
-    public string title;
+    public string worksheetName;
+    public string worksheetDescription;
     public List<ProblemHeader> problems = new List<ProblemHeader>();
 }
 [System.Serializable]

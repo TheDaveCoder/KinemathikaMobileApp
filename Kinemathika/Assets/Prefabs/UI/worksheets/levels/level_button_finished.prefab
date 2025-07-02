@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8082797675892646925}
   - component: {fileID: 1938632979804720609}
   - component: {fileID: 4424718569208055243}
+  - component: {fileID: -1417931345123378871}
+  - component: {fileID: 5574982976002515040}
   m_Layer: 5
   m_Name: level_button_finished
   m_TagString: Untagged
@@ -89,6 +91,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81860c2f77ff72447b6993e3a3f438de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1417931345123378871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188153275823822100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ebb745c0cfc1443aa3dcf03ace5497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprite: {fileID: -6546442896483920088, guid: 7164bee6f6749bc45ad8af16f8269a5b, type: 3}
+  pressedSprite: {fileID: -1876521646025999713, guid: 40fa9c4d82d75e743a198b0908d33ffc, type: 3}
+--- !u!114 &5574982976002515040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188153275823822100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6275356bae2c3b343ab047178aca8999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5869968494520879185
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 11.7}
+  m_AnchoredPosition: {x: 0, y: 11.700001}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &270574854302724620

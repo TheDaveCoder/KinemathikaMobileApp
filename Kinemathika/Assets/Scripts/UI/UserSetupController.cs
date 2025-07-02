@@ -33,7 +33,6 @@ public class UserSetupController : MonoBehaviour
 
     private void OnSubmitClicked()
     {
-        Debug.Log("Observer Fired!");
         string name = nameInputField.text.Trim();
 
         if (string.IsNullOrEmpty(name))

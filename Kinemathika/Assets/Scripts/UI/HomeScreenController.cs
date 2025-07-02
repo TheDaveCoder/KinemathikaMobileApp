@@ -13,21 +13,21 @@ public class HomeScreenController : MonoBehaviour
     [SerializeField] private GameObject buttonCompletedPrefab;
     [SerializeField] private GameObject dividerPrefab;
 
-    private IConceptStateManager _conceptStateManager;
+    private AppContext _context;
+    private ProblemHeaderMetadata _metadata;
     private UserData _userData;
 
-    public void Initialize(IConceptStateManager conceptStateManager, UserData userData)
+    public void Initialize()
     {
-        _conceptStateManager = conceptStateManager;
-        _userData = userData;
+        _context = AppContext.Instance;
+        _userData = _context.GetService<IUserSessionManager>().GetSession();
+        _metadata = _context.GetService<IConceptStateManager>().GetProblemHeaderMetadata();
         InsertButtons();
     }
 
     private void InsertButtons()
     {
-        var metadata = _conceptStateManager.GetProblemHeaderMetadata();
-
-        foreach (var concept in metadata.concepts)
+        foreach (var concept in _metadata.concepts)
         {
             try
             {

@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Bootstrapper : MonoBehaviour
 {
-    [SerializeField] private AppLoader appLoader;
-    void Awake()
-    {
-        // Dependencies
-        IUserSessionManager sessionManager = new LocalSessionManager();
-        IConceptStateManager conceptStateManager = new ConceptStateManager();
+    [SerializeField] private AppBuilder appBuilder;
 
-        // Inject and Launch App
-        appLoader.Construct(sessionManager, conceptStateManager);
+    private void Awake()
+    {
+
+        // Dependencies
+        var sessionManager = new LocalSessionManager();
+        var conceptStateManager = new ConceptStateManager();
+
+        // Register dependencies
+        AppContext.Instance.RegisterService<IUserSessionManager>(sessionManager);
+        AppContext.Instance.RegisterService<IConceptStateManager>(conceptStateManager);
+
+        appBuilder.Build();
+        Destroy(gameObject);
     }
 }
-

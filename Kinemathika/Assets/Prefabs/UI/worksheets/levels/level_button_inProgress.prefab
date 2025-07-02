@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 8963127324257374498}
   - component: {fileID: 4097775656963021877}
   - component: {fileID: 4108118604077489951}
+  - component: {fileID: 165488598683893196}
+  - component: {fileID: 4861521016390841194}
   m_Layer: 5
   m_Name: level_button_inProgress
   m_TagString: Untagged
@@ -162,5 +164,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81860c2f77ff72447b6993e3a3f438de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &165488598683893196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541226116349007528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ebb745c0cfc1443aa3dcf03ace5497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprite: {fileID: 1878393514356674809, guid: c78eee7c4f0f99544b2949ecdb994d7e, type: 3}
+  pressedSprite: {fileID: -1389730806868240830, guid: f99fa9238e9d4ce448afb35b1152813b, type: 3}
+--- !u!114 &4861521016390841194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541226116349007528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6275356bae2c3b343ab047178aca8999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 5283757544386013815}
   - component: {fileID: 8032082880230516565}
   - component: {fileID: 9010815467689843031}
+  - component: {fileID: 201013064804034973}
   m_Layer: 5
   m_Name: level_locked
   m_TagString: Untagged
@@ -162,5 +163,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81860c2f77ff72447b6993e3a3f438de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &201013064804034973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655016111989866279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6275356bae2c3b343ab047178aca8999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

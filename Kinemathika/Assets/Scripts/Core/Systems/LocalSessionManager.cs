@@ -1,51 +1,37 @@
-using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
 using System.Collections.Generic;
-using System;
 
 public class LocalSessionManager : IUserSessionManager
 {
     private const string FileName = "user_session.json";
-    private string _filePath;
+    private const string standardStartProblemID = "a1-1";
+    private const string starndardStartConceptId = "a";
     private UserData _user;
 
-    public async Task InitializeAsync()
-    {
-        _filePath = Path.Combine(Application.persistentDataPath, FileName);
-
-        var dir = Path.GetDirectoryName(_filePath);
-        if (!Directory.Exists(dir))
-            Directory.CreateDirectory(dir);
-
-        await Task.CompletedTask;
-    }
     public async Task<bool> CheckSessionAsync()
     {
-        if (!File.Exists(_filePath))
+        if (!JsonFileService.FileExists(FileName))
+            return false;
+
+        _user = await JsonFileService.LoadAsync<UserData>(FileName);
+
+        if (_user == null || string.IsNullOrEmpty(_user.username))
         {
+            Debug.LogWarning("Failed to parse session or username missing.");
             return false;
         }
 
-        try
-        {
-            string json = await File.ReadAllTextAsync(_filePath);
-            _user = JsonUtility.FromJson<UserData>(json);
-            return !string.IsNullOrEmpty(_user?.username);
-        }
-        catch
-        {
-            Debug.LogWarning("File exists but parsing failed.");
-            return false;
-        }
+        return true;
     }
+
     public async Task CreateSessionAsync(string username, ProblemHeaderMetadata problemMetadata)
     {
         _user = new UserData
         {
             username = username,
-            latestConcept = "",
-            latestProblemId = "a1-1",
+            latestConcept = starndardStartConceptId,
+            latestProblemId = standardStartProblemID,
             progress = new List<ConceptProgress>()
         };
 
@@ -56,9 +42,6 @@ public class LocalSessionManager : IUserSessionManager
                 conceptId = concept.id,
                 worksheets = new List<WorksheetProgress>()
             };
-            Debug.Log("Concept ID: " + concept.title);
-            _user.progress.Add(conceptProgress);
-
 
             foreach (var worksheet in concept.worksheets)
             {
@@ -67,12 +50,14 @@ public class LocalSessionManager : IUserSessionManager
                     worksheetId = worksheet.worksheetId,
                     completedProblems = new List<string>()
                 };
+
                 conceptProgress.worksheets.Add(worksheetProgress);
             }
+
+            _user.progress.Add(conceptProgress);
         }
 
-        string json = JsonUtility.ToJson(_user, prettyPrint: true);
-        await File.WriteAllTextAsync(_filePath, json);
+        await JsonFileService.SaveAsync(FileName, _user);
     }
 
     public UserData GetSession()

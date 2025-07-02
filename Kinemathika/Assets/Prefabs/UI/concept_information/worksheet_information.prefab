@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8714774125530648094}
   m_Layer: 5
-  m_Name: Worksheet Divider
+  m_Name: WorksheetDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 2618768006125342820}
   - component: {fileID: 2561071121298247798}
   m_Layer: 5
-  m_Name: Worksheet Number
+  m_Name: WorksheetName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -49.216}
-  m_SizeDelta: {x: 350, y: 44.815}
+  m_SizeDelta: {x: 350, y: 71.8519}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2618768006125342820
 CanvasRenderer:
@@ -443,7 +443,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 50
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
