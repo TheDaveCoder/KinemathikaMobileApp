@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Unity.Android.Gradle.Manifest;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class AppContext : MonoBehaviour
 {
+    public static bool isInitialized; 
     private static AppContext _instance;
     public static AppContext Instance
     {

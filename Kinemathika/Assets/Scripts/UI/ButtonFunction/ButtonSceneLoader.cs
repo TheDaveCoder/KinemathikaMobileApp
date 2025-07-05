@@ -1,16 +1,17 @@
-using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ButtonSceneLoader : MonoBehaviour
+public class ButtonSceneLoader : MonoBehaviour, IPointerClickHandler
 {
-    void Start()
+    public void OnPointerClick(PointerEventData eventData)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        var data = GetComponent<LevelButtonData>();
+        if (data == null)
+        {
+            Debug.LogError("IProblemButtonData not found.");
+            return;
+        }
+        AppContext.Instance.GetService<IPlayModeManager>().Load(data);
     }
 }
+

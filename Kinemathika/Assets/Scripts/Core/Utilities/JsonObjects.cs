@@ -49,6 +49,21 @@ public class WorksheetHeader
 public class ProblemHeader
 {
     public string problemId;
+    public int problemType;
     public string title;
     public string description;
+}
+
+// Question List Wrapper
+[System.Serializable]
+public class QuestionListWrapper { public List<QuestionMetadata> questions; }
+
+// Full Question Metadata
+[System.Serializable]
+public class QuestionMetadata
+{
+    public string description;
+    public int correctAnswer;
+    public int duration;
+    public int timeScale;
 }

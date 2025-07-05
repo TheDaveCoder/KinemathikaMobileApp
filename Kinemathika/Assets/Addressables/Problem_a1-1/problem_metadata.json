@@ -1,0 +1,10 @@
+{
+  "questions": [
+    {
+      "description": "What is the average speed of the car?",
+      "correctAnswer": 3,
+      "duration": 40,
+      "timeScale": 4 
+    }
+ ]
+}

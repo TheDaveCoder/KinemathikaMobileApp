@@ -1,0 +1,10 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "TestMetadataContainer", menuName = "Scriptable Objects/TestMetadataContainer")]
+public class TestMetadataContainer : ScriptableObject
+{
+    [Tooltip("AR Scene Pack prefab")]
+    public GameObject scenePackPrefab;
+    [Tooltip("Question metadata JSON")]
+    public TextAsset metadataJson;
+}

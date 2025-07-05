@@ -6,15 +6,13 @@ public class Bootstrapper : MonoBehaviour
 
     private void Awake()
     {
-
-        // Dependencies
-        var sessionManager = new LocalSessionManager();
-        var conceptStateManager = new ConceptStateManager();
-
-        // Register dependencies
-        AppContext.Instance.RegisterService<IUserSessionManager>(sessionManager);
-        AppContext.Instance.RegisterService<IConceptStateManager>(conceptStateManager);
-
+        if (!AppContext.isInitialized)
+        {
+            // Register dependencies
+            AppContext.Instance.RegisterService<IUserSessionManager>(new LocalSessionManager());
+            AppContext.Instance.RegisterService<IConceptStateManager>(new ConceptStateManager());
+            AppContext.Instance.RegisterService<IPlayModeManager>(new PlayModeManager());
+        }
         appBuilder.Build();
         Destroy(gameObject);
     }
